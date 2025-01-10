@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+
+:root {
+    --color-1: #ffffff;
+    --color-2: #2D3B23;
+    --color-3: #7EBDC2;
+    --color-4: #8E4A49;
+    --color-5: #DFD4B7;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-2);
+    min-height: 95vh;
+}
+.poiret-one-regular {
+    font-family: "Poiret One", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--color-1);
+    font-weight: 500;
+  }
