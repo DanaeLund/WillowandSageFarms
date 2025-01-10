@@ -16,6 +16,17 @@ body {
     background-color: var(--color-2);
     min-height: 95vh;
 }
+
+.social-icon img {
+    width: 5rem;
+    margin: 0.5rem;
+}
+
+.message {
+    /* background-color: #7EBDC2; */
+    text-align: center;
+}
+
 .poiret-one-regular {
     font-family: "Poiret One", serif;
     font-weight: 400;
