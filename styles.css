@@ -8,17 +8,66 @@
     --color-5: #DFD4B7;
 }
 
-body {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    min-height: 8rem;
+    background-color: var(--color-2);
+}
+
+main {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--color-2);
-    min-height: 95vh;
+    min-height: 100vh;
+}
+
+#wip-body {
+    background: url(assets/wip-bg.jpg) no-repeat;
+    background-size: cover;
+    backdrop-filter: blur(2px)  brightness(70%);
+
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(180deg, var(--color-2) 70%, rgba(255, 255, 255, 0));
+    padding: 2rem;
+    border-radius: 1rem;
+    max-width: 600px;
+    backdrop-filter: blur(5px) brightness(200%);
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:visited {
+    color: var(--color-3);
+}
+
+a:hover {
+    color: var(--color-5);
+    font-weight: bold;
+    text-decoration: underline;
 }
 
 .social-icon {
     margin: 0.25rem;
+}
+
+.social-icon-container {
+    padding: 2rem;
 }
 
 .message {
