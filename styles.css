@@ -17,6 +17,10 @@ body {
     min-height: 95vh;
 }
 
+.social-icon {
+    margin: 0.25rem;
+}
+
 .message {
     /* background-color: #7EBDC2; */
     text-align: center;
