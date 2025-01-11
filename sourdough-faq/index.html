@@ -20,12 +20,129 @@
         </nav>
     </header>
     <main>
-        <section is="sourdough-faq-hero">
-            <h2></h2>
+        <section id="sourdough-faq-hero">
+            <h2  style="margin-block: 2rem;" class="poiret-one-regular white-text extra-extra-large-text center-text text-shadow hero-header" style="font-weight: 900;">SOURDOUGH</h2>
+            <h2  style="margin-block: 2rem;" class="poiret-one-regular white-text extra-extra-large-text center-text text-shadow hero-header" style="font-weight: 900;">FAQ</h2>
+            <div class="flavour">
+                <p class="poiret-one-regular white-text normal-text text-shadow center-text">See Frequently Asked Questions</p>
+            <img width="50px" height="50px" src="/assets/arrow.svg" alt="">
+            </div>
+        </section>
+        <section class="faq-section">
+            <div class="faq-item">
+                <div class="faq-question poiret-one-regular green-text center-text">
+                    Q: How long does sourdough bread stay fresh?
+                    <img class="arrow" width="16px" src="/assets/arrow-icon.svg" alt="">
+                </div>
+
+                <div class="faq-answer poiret-one-regular green-text"">
+                    A: Sourdough bread stays fresh for 4-5 days on the counter if wrapped in a clean towel or stored in a bread box. <br>It can last up to 1 week in the fridge (though refrigeration may dry it out) and 3-6 months in the freezer if properly wrapped.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question poiret-one-regular green-text center-text">
+                    Q: What’s the best way to store sourdough bread?
+                    <img class="arrow" width="16px" src="/assets/arrow-icon.svg" alt="">
+                </div>
+
+                <div class="faq-answer poiret-one-regular green-text"">
+                    A: Store sourdough bread in a breathable container like a bread box or wrap it in a clean towel to maintain its crust. <br>Avoid plastic bags unless freezing.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question poiret-one-regular green-text center-text">
+                    Q: How do I revive sourdough from the freezer?
+                    <img class="arrow" width="16px" src="/assets/arrow-icon.svg" alt="">
+                </div>
+
+                <div class="faq-answer poiret-one-regular green-text"">
+                    A: To revive frozen sourdough:
+                    <ul>
+                        <li>1. Let the bread thaw at room temperature for 2-3 hours.</li>
+                        <li>2. Preheat your oven to 350°F (175°C).</li>
+                        <li>3. Spray loaf with a small amount of water.</li>
+                        <li>4. Bake the bread for 10-15 minutes to restore its crispy crust and fresh-baked flavor.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question poiret-one-regular green-text center-text">
+                    Q: What if my sourdough bread goes stale?
+                    <img class="arrow" width="16px" src="/assets/arrow-icon.svg" alt="">
+                </div>
+
+                <div class="faq-answer poiret-one-regular green-text"">
+                    A: If your sourdough bread is stale, sprinkle it lightly with water and heat it in the oven at 350°F (175°C) for 5-10 minutes. <br>This will soften the interior and crisp the crust.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question poiret-one-regular green-text center-text">
+                    Q: Why choose sourdough bread?
+                    <img class="arrow" width="16px" src="/assets/arrow-icon.svg" alt="">
+                </div>
+
+                <div class="faq-answer poiret-one-regular green-text"">
+                    A: Sourdough bread is naturally fermented, making it easier to digest and full of flavor. <br>It’s versatile, nutritious, and perfect for sandwiches, toasts, or enjoying plain.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question poiret-one-regular green-text center-text">
+                    Q: Is sourdough bread healthier than regular bread?
+                    <img class="arrow" width="16px" src="/assets/arrow-icon.svg" alt="">
+                </div>
+
+                <div class="faq-answer poiret-one-regular green-text"">
+                    A: Sourdough bread is often considered healthier because its fermentation process makes it easier to digest, lowers its glycemic index, and can improve nutrient absorption.
+
+
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question poiret-one-regular green-text center-text">
+                    Q: What makes sourdough bread unique?
+                    <img class="arrow" width="16px" src="/assets/arrow-icon.svg" alt="">
+                </div>
+
+                <div class="faq-answer poiret-one-regular green-text"">
+                    A: Sourdough bread is made using a natural fermentation process with wild yeast and bacteria, giving it a tangy flavor, airy texture, and longer shelf life compared to commercially yeasted bread.
+                </div>
+            </div>
+            
+              <script>
+                const faqItems = document.querySelectorAll('.faq-item');
+            
+                faqItems.forEach(item => {
+                  const question = item.querySelector('.faq-question');
+                  const answer = item.querySelector('.faq-answer');
+                  const arrow = item.querySelector('.arrow');
+            
+                  question.addEventListener('click', () => {
+                    const isOpen = answer.classList.contains('open');
+                    
+                    // Close all other open answers
+                    faqItems.forEach(i => {
+                      i.querySelector('.faq-answer').classList.remove('open');
+                      i.querySelector('.arrow').classList.remove('open');
+                    });
+            
+                    // Toggle the current one
+                    if (!isOpen) {
+                      answer.classList.add('open');
+                      arrow.classList.add('open');
+                    }
+                  });
+                });
+              </script>
         </section>
     </main>
     <footer>
-        <p class="poiret-one-regular">&copy; 2025 Willow and Sage Farms. All Rights Reserved.</p>
+        <p class="poiret-one-regular white-text text-shadow">&copy; 2025 Willow and Sage Farms. All Rights Reserved.</p>
     </footer>
 </body>
 </html>

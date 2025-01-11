@@ -50,6 +50,7 @@ a {
 .cta-button {
     color: var(--color-2);
     font-weight: bold;
+    font-size: 1rem;
     background-color: var(--color-1);
     padding: 1rem 1.5rem;
     border-radius: 1rem;
@@ -57,6 +58,22 @@ a {
 }
 
 .cta-button:hover {
+    transform: scale(1.1);
+    transition: all 0.2s;
+    text-decoration: none;
+}
+
+.hero-cta-button {
+    color: var(--color-2);
+    font-weight: bold;
+    font-size: 1.75rem;
+    background-color: var(--color-1);
+    padding: 1rem 1.5rem;
+    border-radius: 1rem;
+    transition: all 0.2s;
+}
+
+.hero-cta-button:hover {
     transform: scale(1.1);
     transition: all 0.2s;
     text-decoration: none;
@@ -91,7 +108,25 @@ h2 {
     backdrop-filter: blur(2px)  brightness(70%);
 }
 
+.hero-header {
+    font-size: 10rem;
+}
+
 #sourdough-hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: black;
+    background-image: linear-gradient(90deg, black, rgba(0, 0, 0, 0.192), black), url(assets/home-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: calc(100vh - 8rem);
+}
+
+#sourdough-faq-hero {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -100,7 +135,7 @@ h2 {
     background: black;
     background-image: linear-gradient(90deg, black, rgba(0, 0, 0, 0.192), black), url(assets/faq-bg.jpg);
     background-position: center;
-    background-size: 75%;
+    background-size: cover;
     background-repeat: no-repeat;
     min-height: calc(100vh - 8rem);
 }
@@ -118,8 +153,10 @@ h2 {
 }
 
 #flavour-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 304px);
+    /* display: grid;
+    grid-template-columns: repeat(4, 304px); */
+    display: flex;
+    flex-wrap: wrap;
     gap: 16px;
     width: fit-content;
     margin: auto;
@@ -134,16 +171,28 @@ h2 {
     border-radius: 1rem;
     width: 304px;
     height: 480px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.05);
-    overflow: hidden;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.05);
 }
 
 .flavour-header {
-    position: relative;
-    bottom: 0;
-    background-color: rgba(255, 255, 255, 0.384);
+    background-color: rgba(255, 255, 255, 0.4);
     backdrop-filter: blur(5px);
     padding: 20px;
+    border-radius: 0.9rem 0.9rem 0rem 0rem;
+}
+
+.flavour-header-solid {
+    background-color: rgba(255, 255, 255);
+    backdrop-filter: blur(5px);
+    padding: 20px;
+    border-radius: 0.9rem 0.9rem 0rem 0rem;
+}
+
+.price-header {
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(5px);
+    padding: 20px;
+    border-radius: 0rem 0rem 0.9rem 0.9rem;
 }
 
 #classic-sourdough {
@@ -154,28 +203,25 @@ h2 {
 }
 
 #garlic-herb {
-    background-image: url(assets/classic.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 #cheddar-jalapeno {
-    background-image: url(assets/classic.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 #multigrain-sourdough {
-    background-image: url(assets/classic.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 .in-active {
-    filter: brightness(25%);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(assets/classic.jpg);
 }
 
 .card {
@@ -224,14 +270,60 @@ h2 {
     padding: 2rem;
 }
 
+.faq-section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding-block: 2rem;
+  }
+
+  .faq-item {
+    border-bottom: 1px solid var(--color-2);
+    padding: 10px 0;
+  }
+
+  .faq-question {
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1rem;
+  }
+
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    font-size: 16px;
+  }
+
+  .faq-answer.open {
+    max-height: 200px; /* Adjust based on content */
+  }
+
+  .arrow {
+    transform: rotate(0deg);
+    transition: transform 0.3s ease;
+    margin-left: 1rem;
+  }
+
+  .arrow.open {
+    transform: rotate(90deg);
+  }
+
 /* GENERAL STYLES */
 
 .poiret-one-regular {
     font-family: "Poiret One", serif;
     font-weight: 400;
     font-style: normal;
-    color: var(--color-1);
     font-weight: 500;
+  }
+
+  .montserrat {
+    font-family: "Montserrat", serif;
+    font-style: normal;
   }
 
   .white-text {
@@ -296,11 +388,29 @@ h2 {
     
   }
 
-  @media (max-width: 600px){
+  @media (max-width: 992px){
     #wip-body {
         background-image: none;
         background-color: var(--color-2);
         backdrop-filter: blur(0px)  brightness(100%);
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero-header {
+        font-size: 3rem;
+    }
+
+    #flavour-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 304px);
+        gap: 16px;
+        width: fit-content;
+        margin: auto;
+        padding-top: 40px;
+        padding-bottom: 20px;
     }
 
     .card {
