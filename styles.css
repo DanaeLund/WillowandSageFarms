@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poiret+One&display=swap');
+
 :root {
     --color-1: #ffffff;
     --color-2: #2D3B23;
@@ -15,11 +17,56 @@
 }
 
 header {
-    min-height: 8rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-height: 8rem;
     background-color: var(--color-2);
+    padding-inline: 20px;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+a {
+  font-family: "Poiret One", serif;
+}
+
+.nav-links {
+    color: var(--color-1);
+    text-decoration: none;
+}
+
+.nav-links:hover {
+    text-decoration: underline;
+}
+
+.cta-button {
+    color: var(--color-2);
+    font-weight: bold;
+    background-color: var(--color-1);
+    padding: 1rem 1.5rem;
+    border-radius: 1rem;
+    transition: all 0.2s;
+}
+
+.cta-button:hover {
+    transform: scale(1.1);
+    transition: all 0.2s;
+    text-decoration: none;
 }
 
 main {
+    min-height: 100vh;
+}
+
+#wip-main {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -27,10 +74,108 @@ main {
     min-height: 100vh;
 }
 
+
+section {
+    width: 100%;
+    padding-inline: 20px;
+}
+
+h2 {
+    font-size: 2rem;
+    color: var(--color-2);
+}
+
 #wip-body {
     background: url(assets/wip-bg.jpg) no-repeat;
     background-size: cover;
     backdrop-filter: blur(2px)  brightness(70%);
+}
+
+#sourdough-hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: black;
+    background-image: linear-gradient(90deg, black, rgba(0, 0, 0, 0.192), black), url(assets/faq-bg.jpg);
+    background-position: center;
+    background-size: 75%;
+    background-repeat: no-repeat;
+    min-height: calc(100vh - 8rem);
+}
+
+#product {
+    position: static;
+}
+
+.flavour {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    animation: arrow 3s infinite ease-out;
+}
+
+#flavour-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 304px);
+    gap: 16px;
+    width: fit-content;
+    margin: auto;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+.flavour-card {
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    border-radius: 1rem;
+    width: 304px;
+    height: 480px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+.flavour-header {
+    position: relative;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.384);
+    backdrop-filter: blur(5px);
+    padding: 20px;
+}
+
+#classic-sourdough {
+    background-image: url(assets/classic.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#garlic-herb {
+    background-image: url(assets/classic.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#cheddar-jalapeno {
+    background-image: url(assets/classic.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#multigrain-sourdough {
+    background-image: url(assets/classic.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.in-active {
+    filter: brightness(25%);
 }
 
 .card {
@@ -47,19 +192,23 @@ main {
 }
 
 #logo {
-    width: 100%;
+    max-height: 8rem;
 }
 
-a {
+.logo-container {
+    max-height: 8rem;
+}
+
+.sourdough-link {
     text-decoration: none;
     font-weight: bold;
 }
 
-a:visited {
+.sourdough-link:visited {
     color: var(--color-3);
 }
 
-a:hover {
+.sourdough-link:hover {
     color: var(--color-5);
     font-weight: bold;
     text-decoration: underline;
@@ -75,12 +224,76 @@ a:hover {
     padding: 2rem;
 }
 
+/* GENERAL STYLES */
+
 .poiret-one-regular {
     font-family: "Poiret One", serif;
     font-weight: 400;
     font-style: normal;
     color: var(--color-1);
     font-weight: 500;
+  }
+
+  .white-text {
+    color: var(--color-1);
+  }
+
+  .green-text {
+    color: var(--color-2);
+    font-weight: bold;
+  }
+
+  .small-text {
+    font-size: 1rem;
+  }
+
+  .normal-text {
+    font-size: 2rem;
+  }
+
+  .medium-text {
+    font-size: 3rem;
+  }
+
+  .large-text {
+    font-size: 4rem;
+  }
+
+  .extra-large-text {
+    font-size: 6rem;
+  }
+
+  .extra-extra-large-text {
+    font-size: 10rem;
+    font-weight: 900;
+  }
+
+  .center-text {
+    text-align: center;
+  }
+
+  .text-shadow {
+    text-shadow: 0px 0px 10px rgb(0, 0, 0);
+  }
+
+  footer {
+    background-color: var(--color-2);
+    padding-inline: 20px;
+    padding-block: 2rem;
+    text-align: center;
+  }
+
+  @keyframes arrow {
+    0% {
+        transform: translate(0px, -20px);
+    }
+    50% {
+        transform: translate(0px, 20px);
+    }
+    100% {
+        transform: translate(0px, -20px);
+    }
+    
   }
 
   @media (max-width: 600px){
