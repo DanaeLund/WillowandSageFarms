@@ -129,7 +129,7 @@ p {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    min-height: calc(100vh - 8rem);
+    min-height: calc(100vh - 128px);
 }
 
 #sourdough-faq-hero {
@@ -143,7 +143,7 @@ p {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    min-height: calc(100vh - 8rem);
+    min-height: calc(100vh - 128px);
 }
 
 #sourdough-contact-hero {
@@ -157,7 +157,7 @@ p {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    min-height: calc(100vh - 8rem);
+    min-height: calc(100vh - 128px);
 }
 
 #product {
