@@ -10,19 +10,56 @@
 <body>
     <header>
         <div class="logo-container">
-            <img id="logo" src="/assets/Willow & Sage Logo Long.png" alt="">
+            <a href="/sourdough/">
+                <img id="logo" src="/assets/Willow & Sage Logo Long.png" alt="">
+            </a>
         </div>
         <nav>
             <a class="nav-links" href="/sourdough/">Home</a>
             <a class="nav-links" href="/sourdough-faq/">Sourdough FAQ</a>
-            <a href="/sourdough-contact/" class="nav-links">Contact</a>
             <a class="nav-links cta-button" href="/sourdough-order/">Order Sourdough</a>
         </nav>
     </header>
     <main>
-        <section id="sourdough-hero">
-            <h2></h2>
-        </section>
+          <h2  style="margin-block: 2rem;" class="poiret-one-regular green-text large-text center-text" style="font-weight: 900;">Order Your Sourdough Bread</h2>
+          <p class="poiret-one-regular green-text small-text center-text">As this is a home kitchen and not my main day job, I only keep a set amount of slots per week avavilable.</p>
+          <p class="poiret-one-regular green-text small-text center-text">Fill out the form below to inquire if there is an ordering slot open for your selected week. If not, we can add you to a wait list to be notified when there is avavilable slots.</p>
+          <form action="https://formspree.io/f/xlddaalz" method="POST">
+            
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+        
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+        
+            <label for="bread">Select Bread Type</label>
+            <select id="bread" name="bread" required>
+              <option value="">-- Choose a Bread Type --</option>
+              <option value="Classic Sourdough">Classic Sourdough</option>
+            </select>
+
+            <label for="size">Choose Bread Loaf Size</label>
+                <select id="size" name="size" required>
+                <option value="">-- Select Loaf Size --</option>
+                <option value="Full Loaf">Family Size</option>
+                <option value="Half Loaf">Half Size</option>
+                <option value="Single Slice">Single Size</option>
+                </select>
+        
+            <label for="quantity">Quantity</label>
+            <input type="number" id="quantity" name="quantity" min="1" max="20" placeholder="Enter the number of loaves" required>
+
+            <label for="pickup-date">Select Pickup Date (Pickups are Sundays Only @ 8:00 PM PST)</label>
+            <input type="date" id="pickup-date" name="pickup_date" required>
+        
+            <label for="message">Additional Notes</label>
+            <textarea id="message" name="message" rows="4" placeholder="Any special requests or pickup instructions?"></textarea>
+        
+            <button type="submit">Place Order</button>
+          </form>
     </main>
     <footer>
         <p class="poiret-one-regular">&copy; 2025 Willow and Sage Farms. All Rights Reserved.</p>

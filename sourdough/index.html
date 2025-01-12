@@ -10,12 +10,13 @@
 <body>
     <header>
         <div class="logo-container">
-            <img id="logo" src="/assets/Willow & Sage Logo Long.png" alt="">
+            <a href="/sourdough/">
+                <img id="logo" src="/assets/Willow & Sage Logo Long.png" alt="">
+            </a>
         </div>
         <nav>
             <a class="nav-links" href="/sourdough/">Home</a>
             <a class="nav-links" href="/sourdough-faq/">Sourdough FAQ</a>
-            <a href="/sourdough-contact/" class="nav-links">Contact</a>
             <a class="nav-links cta-button" href="/sourdough-order/">Order Sourdough</a>
         </nav>
     </header>
@@ -28,6 +29,7 @@
             <img width="50px" height="50px" src="/assets/arrow.svg" alt="">
             </div>
         </section>
+
         <section id="product">
             <h3 style="margin-top: 2rem;" class="poiret-one-regular green-text large-text center-text">Products from the kitchen</h3>
             <div id="flavour-grid">
@@ -49,6 +51,68 @@
                     <h4 class="poiret-one-regular green-text normal-text center-text flavour-header-solid">Coming Soon</h4>
                 </div>
             </div>
+        </section>
+
+        <section class="faq-section">
+            <h2  style="margin-block: 2rem;" class="poiret-one-regular green-text large-text center-text" style="font-weight: 900;">FAQ</h2>
+            <div class="faq-item">
+                <div class="faq-question poiret-one-regular green-text center-text">
+                    Q: How do I store sourdough bread to keep it fresh?
+                    <img class="arrow" width="16px" src="/assets/arrow-icon.svg" alt="">
+                </div>
+
+                <div class="faq-answer poiret-one-regular green-text"">
+                    A: To keep your sourdough bread fresh, store it in a breathable container like a bread box or wrap it in a clean towel. Avoid plastic bags, as they can make the crust soggy. <br><br>If you won’t finish it within a few days, you can freeze it by wrapping it tightly in plastic wrap and placing it in a freezer-safe bag.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question poiret-one-regular green-text center-text">
+                    Q: What can I eat sourdough bread with or use it for?
+                    <img class="arrow" width="16px" src="/assets/arrow-icon.svg" alt="">
+                </div>
+
+                <div class="faq-answer poiret-one-regular green-text"">
+                    A: Sourdough bread is incredibly versatile! Enjoy it toasted with butter, avocado, or jam. Use it to make sandwiches, as a base for bruschetta, or serve it alongside soups, stews, or dips. <br><br>You can even use leftover slices for French toast or croutons!
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question poiret-one-regular green-text center-text">
+                    Q: How do I cut sourdough bread properly?
+                    <img class="arrow" width="16px" src="/assets/arrow-icon.svg" alt="">
+                </div>
+
+                <div class="faq-answer poiret-one-regular green-text"">
+                    A: Sourdough bread has a firm crust, so using a serrated knife is essential. <br><br>Place the bread on a sturdy cutting board and hold it steady. <br>Use a gentle sawing motion with the serrated knife to avoid squishing the loaf or making uneven slices.
+                </div>
+            </div>
+            
+              <script>
+                const faqItems = document.querySelectorAll('.faq-item');
+            
+                faqItems.forEach(item => {
+                  const question = item.querySelector('.faq-question');
+                  const answer = item.querySelector('.faq-answer');
+                  const arrow = item.querySelector('.arrow');
+            
+                  question.addEventListener('click', () => {
+                    const isOpen = answer.classList.contains('open');
+                    
+                    // Close all other open answers
+                    faqItems.forEach(i => {
+                      i.querySelector('.faq-answer').classList.remove('open');
+                      i.querySelector('.arrow').classList.remove('open');
+                    });
+            
+                    // Toggle the current one
+                    if (!isOpen) {
+                      answer.classList.add('open');
+                      arrow.classList.add('open');
+                    }
+                  });
+                });
+              </script>
         </section>
     </main>
     <footer>
