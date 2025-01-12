@@ -50,11 +50,11 @@ a {
 .cta-button {
     color: var(--color-2);
     font-weight: bold;
-    font-size: 1rem;
     background-color: var(--color-1);
     padding: 1rem 1.5rem;
     border-radius: 1rem;
     transition: all 0.2s;
+    text-decoration: none;
 }
 
 .cta-button:hover {
@@ -71,6 +71,7 @@ a {
     padding: 1rem 1.5rem;
     border-radius: 1rem;
     transition: all 0.2s;
+    text-decoration: none;
 }
 
 .hero-cta-button:hover {
@@ -96,6 +97,10 @@ section {
 h2 {
     font-size: 2rem;
     color: var(--color-2);
+}
+
+p {
+    margin-inline: 20px;
 }
 
 #wip-body {
@@ -280,6 +285,13 @@ h2 {
     padding: 2rem;
 }
 
+.button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
 .faq-section {
     max-width: 900px;
     margin: 0 auto;
@@ -299,13 +311,15 @@ h2 {
     justify-content: space-between;
     align-items: center;
     padding-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: 900;
   }
 
   .faq-answer {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease;
-    font-size: 16px;
+    font-size: 1.5rem;
   }
 
   .faq-answer.open {
@@ -393,7 +407,7 @@ h2 {
   }
 
   .small-text {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 
   .normal-text {
@@ -410,6 +424,7 @@ h2 {
 
   .extra-large-text {
     font-size: 6rem;
+    font-weight: 900;
   }
 
   .extra-extra-large-text {
@@ -453,7 +468,16 @@ h2 {
         backdrop-filter: blur(0px)  brightness(100%);
     }
 
-    .nav-links {
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-height: 8rem;
+        background-color: var(--color-2);
+        padding-inline: 20px;
+    }
+
+    nav {
         display: none;
     }
 
@@ -492,4 +516,29 @@ h2 {
         width: 3rem;
         height: 3rem;
     }
+
+    .small-text {
+        font-size: 0.75rem;
+      }
+    
+      .normal-text {
+        font-size: 1.5rem;
+      }
+    
+      .medium-text {
+        font-size: 1.75rem;
+      }
+    
+      .large-text {
+        font-size: 2.5rem;
+      }
+    
+      .extra-large-text {
+        font-size: 3rem;
+      }
+    
+      .extra-extra-large-text {
+        font-size: 3rem;
+        font-weight: 900;
+      }
   }
