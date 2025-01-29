@@ -631,6 +631,7 @@ article ul li {
     
         background: var(--color-2);
         padding: 2rem;
+        margin: 2rem;
         min-height: 475px;
     }
 
