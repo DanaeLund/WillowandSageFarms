@@ -190,6 +190,20 @@ article ul li {
     min-height: calc(100vh - 128px);
 }
 
+#sourdough-recipe-hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background: black;
+  background-image: linear-gradient(90deg, black, rgba(0, 0, 0, 0.192), black), url(assets/bread.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: calc(100vh - 128px);
+}
+
 #product {
     position: static;
 }
