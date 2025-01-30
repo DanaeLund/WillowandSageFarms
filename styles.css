@@ -296,6 +296,7 @@ article ul li {
 
     background: linear-gradient(180deg, var(--color-2) 70%, rgba(255, 255, 255, 0));
     padding: 2rem;
+    margin: 2rem;
     border-radius: 1rem;
     min-width: 200px;
     max-width: 600px;
@@ -304,8 +305,6 @@ article ul li {
 
 .logo {
     min-width: 200px;
-    width: 20wh;
-    max-width: 600px;
 }
 
 .logo-container {
