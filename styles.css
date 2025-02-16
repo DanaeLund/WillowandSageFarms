@@ -115,7 +115,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 10rem;
+  font-size: 8rem;
 }
 
 h2 {
@@ -127,7 +127,8 @@ h3 {
 }
 
 h4 {
-  font-size: 3rem;
+  font-size: 2.5rem;
+  margin-top: 2rem;
 }
 
 h5 {
@@ -486,6 +487,10 @@ article ul li {
   }
 
 /* GENERAL STYLES */
+
+.recipe-title {
+  font-size: 4rem;
+}
 
 .poiret-one-regular {
     font-family: "Poiret One", serif;
