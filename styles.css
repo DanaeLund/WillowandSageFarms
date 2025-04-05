@@ -261,10 +261,17 @@ article ul li {
 }
 
 #classic-sourdough {
-    background-image: url(assets/classic.jpg);
+    background-image: url(assets/bread.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+#englishmuffin-plain {
+  background-image: url(assets/englishmuffin.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 #garlic-herb {
