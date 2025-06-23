@@ -115,15 +115,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 8rem;
+  font-size: 6rem;
 }
 
 h2 {
-  font-size: 5rem;
+  font-size: 4rem;
 }
 
 h3 {
-  font-size: 4rem;
+  font-size: 3rem;
 }
 
 h4 {
@@ -562,6 +562,11 @@ article ul li {
     padding-block: 2rem;
     color: var(--color-1);
     text-align: center;
+  }
+
+  TAILWIND ADJUSTMENTS
+  .splide__slide>img{
+    width: 150%;
   }
 
   @keyframes arrow {
