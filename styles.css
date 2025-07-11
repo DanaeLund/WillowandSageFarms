@@ -209,6 +209,10 @@ article ul li {
     position: static;
 }
 
+.product-details>div {
+  padding-block: 0.5rem;
+}
+
 .flavour {
     position: absolute;
     bottom: 20px;
@@ -268,7 +272,28 @@ article ul li {
 }
 
 #englishmuffin-plain {
-  background-image: url(assets/englishmuffin.jpg);
+  background-image: url(assets/englishMuffins.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#bagel-plain {
+  background-image: url(assets/notavailable.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#crackers-plain {
+  background-image: url(assets/notavailable.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#cookies-cow {
+  background-image: url(assets/cow-cookie.png);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -281,6 +306,7 @@ article ul li {
 }
 
 #cheddar-jalapeno {
+  background-image: url(assets/comingSoon.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -309,6 +335,7 @@ article ul li {
     min-width: 200px;
     max-width: 600px;
     backdrop-filter: blur(5px) brightness(130%);
+    overflow: hidden;
 }
 
 .logo {
@@ -517,6 +544,14 @@ article ul li {
 
   .bold-text {
     font-weight: 900;
+  }
+
+  .semibold-text {
+    font-weight: 600;
+  }
+
+  .very-small-text {
+    font-size: .5rem;
   }
 
   .small-text {
