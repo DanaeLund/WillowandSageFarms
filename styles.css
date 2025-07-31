@@ -43,7 +43,7 @@ nav {
 
 a {
   font-family: "Poiret One", serif;
-  color: var(--color-1);
+  /* color: var(--color-1); */
 }
 
 .nav-links {
@@ -285,8 +285,8 @@ article ul li {
   background-repeat: no-repeat;
 }
 
-#crackers-plain {
-  background-image: url(assets/notavailable.png);
+#crackers {
+  background-image: url(assets/crackerPacked.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
