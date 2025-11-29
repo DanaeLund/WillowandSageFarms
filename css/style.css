@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap');
+
+:root {
+    --color-1: #ffffff;
+    --color-1-fade: rgba(255, 255, 255, 0.5);
+    --color-2: #2D3B23;
+    --color-2-fade: rgba(45, 59, 35, 0.5);
+    --color-2-light: #6A7752;
+    --color-3: #7EBDC2;
+    --color-4: #8E4A49;
+    --color-5: #DFD4B7;
+    --color-6: #1e1e1e;
+    --test-color: #ffff00;
+    --font-color: #ffffff;
+    --font-family: "Poiret One", sans-serif;
+    --font-weight: bold;
+    --font-style: normal;
+    --font-alt-family:  "Nothing You Could Do", cursive;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* LAYOUT */
+
+h1, h2, h3, h4, h5, h6 {
+  text-align: center;
+}
+
+
+body {
+  font-family: var(--font-family);
+  font-weight: var(--font-weight);
+  font-style: var(--font-style);
+  display: flex;
+  flex-direction: column;
+  color: var(--font-color);
+  font-size: 125%;
+  line-height: 1.5;
+  padding: 0;
+  margin: 0;
+  background-image: url('/images/bg-image.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+/* .content {
+  margin: auto 10rem;
+} */
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto 10rem;
+}
+
+/* NAVIGATION */
+
+.site-header {
+  background-image: linear-gradient(to bottom, var(--color-2-fade), var(--color-2-fade)), url('/images/Willow & Sage BG.png');
+  background-repeat: repeat;
+  background-size: contain;
+
+}
+
+.site-nav {
+  display: flex;
+  justify-content: space-between;
+  min-height: calc(60px + 2rem );
+  margin: auto 10rem;
+
+}
+
+.site-nav img {
+  max-height: 60px;
+}
+
+.site-nav a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-1);
+  font-weight: bolder;
+}
+
+.main-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: var(--color-1);
+  gap: 3rem;
+}
+
+.shopping-cart-icon {
+  width: 32px;
+  padding: 8px;
+  background-color: var(--color-1);
+  border-radius: 1rem;
+}
+
+.shopping-cart-icon:hover {
+  width: 32px;
+  padding: 8px;
+  background-color: var(--color-5);
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+/* CUSTOM */
+
+.remove-style {
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+}
+
+.product-card-grid {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+  justify-content: space-between;
+  margin-inline: 2rem;
+  overflow-x: hidden;
+}
+
+.product-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: var(--color-1);
+  text-align: center;
+  width: 200px;
+  height: 300px;
+  background-color: var(--color-6);
+  border-radius: 16px;
+  box-shadow: #000 4px 4px 8px;
+  overflow: hidden;
+  margin: 1rem;
+}
+
+.product-card-text-container {
+  color: var(--font-color );
+  padding: 1rem;
+}
+
+.product-title {
+  font-size: 1rem; 
+  padding: 0;
+  margin: 0;
+}
+
+.price-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+}
+
+.quantity-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.quantity-container input, .quantity-container label {
+  text-align: center;
+  font-family: var(--font-family);
+  font-weight: var(--font-weight);
+  font-size: 1.5rem;
+  border-radius: 8px;
+}
+
+.quantity-container input {
+  padding: 0.2rem 0rem;
+  margin-left: 0.5rem;
+  color: black;
+}
+
+.product-price { 
+  font-size: 2rem;
+  padding: 0;
+  margin: 0;
+  font-weight: bold;
+}
+
+.product-image-container {
+  border-radius: 4px 4px 0 0;
+  width: 200px;
+  height: 300px;
+  overflow: hidden;
+}
+
+.product-image-container img {
+  height: 300px;
+  object-position: -10px -60px;
+}
+
+.product-page-grid {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 10rem;
+  margin: auto 10rem;
+} 
+
+.product-page-grid img {
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  object-position: 1px 0px;
+} 
+
+.product-page-text-container h2{
+  padding: 0rem;
+  margin: 0;
+}
+
+/* MEET THE TEAM */
+.meet-the-team .note {
+  background-color: var(--color-6);
+  padding: 2rem;
+  margin-top: 4rem;
+  border-radius: 1rem;
+  box-shadow: #000 4px 4px 8px;
+}
+
+
+/* Stylization */
+
+.alt-text {
+  font-family: var(--font-alt-family);
+}
+
+.button {
+  color: var(--color-2);
+  font-weight: bolder;
+  text-align: center;
+  padding: 0.2rem 2rem;
+  background-color: var(--color-1);
+  border-radius: 8px;
+  margin-block: 2rem;
+}
+
+.button a {
+  color: var(--color-2);
+  font-weight: bolder;
+}
+
+.card-button {
+  color: var(--color-2);
+  font-weight: bolder;
+  text-align: center;
+  padding: 0.2rem 2rem;
+  background-color: var(--color-1);
+}
+
+.card-button a {
+  color: var(--color-2);
+  font-weight: bolder;
+}
+
+.back-button {
+  color: var(--color-2);
+  padding: 0.5rem 1rem;
+  margin: 2rem;
+  max-width: fit-content;
+  border-radius: 1rem;
+  background-color: var(--color-1);
+}
+
+.back-button:hover {
+  background-color: var(--color-5);
+  cursor: pointer;
+}
+
+.snipcart-add-item {
+  color: var(--color-2);
+  font-family: var(--font-family);
+  font-weight: bolder;
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 0.2rem 2rem;
+  background-color: var(--color-1);
+  border-radius: 8px;
+  border: none;
+  margin-block: 1rem;
+}
+
+.snipcart-add-item:hover {
+  color: var(--color-2);
+  background-color: var(--color-5);
+  cursor: pointer;
+}
+
+/* SEARCH */
+.store-search {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 5rem;
+  align-items: center;
+  background-color: #1e1e1e;
+  box-shadow: #00000050 0px 8px 8px;
+}
+.store-search input {
+  padding: 0.75rem;
+  width: 100%;
+  max-width: 500px;
+  font-size: 1rem;
+  border: 1px solid #1e1e1e;
+  border-radius: 8px;
+}
+
+@media screen and (max-width: 48rem) {
+  .site-nav,
+  .main-menu {
+    flex-direction: column;
+  }
+
+  .site-nav a {
+    padding: 0.5rem;
+    padding-left: 0;
+  }
+
+  .site-nav {
+  padding-bottom: 2rem;
+
+}
+}
+
+/* LISTS */
+
+.post-snippet {
+  margin-bottom: 1rem;
+}
+
+.post-snippet h3 {
+  margin-bottom: 0.25rem;
+}
+
+/* HERO SECTION */
+
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 90vh;
+  overflow: hidden;
+}
+
+.hero-section video {
+  height: 100%;
+
+}
