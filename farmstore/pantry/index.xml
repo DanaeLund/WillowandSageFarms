@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Canned Goods on Willow and Sage Farms</title>
-    <link>http://localhost:1313/farmstore/pantry/</link>
+    <link>https://www.willowandsagefarms.com/farmstore/pantry/</link>
     <description>Recent content in Canned Goods on Willow and Sage Farms</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 26 Nov 2025 13:17:16 -0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/farmstore/pantry/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.willowandsagefarms.com/farmstore/pantry/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Blueberry Jam</title>
-      <link>http://localhost:1313/farmstore/pantry/blueberry-jam-250ml/</link>
+      <link>https://www.willowandsagefarms.com/farmstore/pantry/blueberry-jam-250ml/</link>
       <pubDate>Wed, 26 Nov 2025 13:17:16 -0800</pubDate>
-      <guid>http://localhost:1313/farmstore/pantry/blueberry-jam-250ml/</guid>
+      <guid>https://www.willowandsagefarms.com/farmstore/pantry/blueberry-jam-250ml/</guid>
       <description></description>
     </item>
   </channel>

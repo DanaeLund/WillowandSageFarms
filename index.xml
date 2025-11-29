@@ -2,101 +2,101 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Home on Willow and Sage Farms</title>
-    <link>http://localhost:1313/</link>
+    <link>https://www.willowandsagefarms.com/</link>
     <description>Recent content in Home on Willow and Sage Farms</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 28 Nov 2025 20:11:35 -0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.willowandsagefarms.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Contact Us</title>
-      <link>http://localhost:1313/contact/</link>
+      <link>https://www.willowandsagefarms.com/contact/</link>
       <pubDate>Fri, 28 Nov 2025 20:11:35 -0800</pubDate>
-      <guid>http://localhost:1313/contact/</guid>
+      <guid>https://www.willowandsagefarms.com/contact/</guid>
       <description>&lt;section class=&#34;contact-section&#34;&gt;&#xA;  &lt;p style=&#34;margin-top:0;&#34;&gt;&#xA;    We love hearing from customers, big and small. &lt;br&gt;&#xA;    Whether you want to place an order, ask about ingredients, arrange pickup, or talk wholesale, send us a message and we will get back to you.&#xA;  &lt;/p&gt;&#xA;  &lt;div style=&#34;display:grid;grid-template-columns:1fr;gap:1.25rem;margin-top:1.5rem;&#34;&gt;&#xA;    &lt;!-- Contact Details --&gt;&#xA;    &lt;div class=&#34;contact-details&#34; style=&#34;color: #000000;background:#ffffff;padding:1rem;border-radius:10px;box-shadow:0 2px 6px rgba(0,0,0,0.04);&#34;&gt;&#xA;      &lt;h2 class=&#34;remove-style&#34;&gt;Email:&lt;/h2&gt;&#xA;      &lt;p style=&#34;font-size:1.6rem; margin:0 0 0.75rem 0&#34;&gt;&#xA;        &lt;a href=&#34;mailto:willowandsagefarms@gmail.com&#34; style=&#34;color:#000000;word-break:break-all&#34;&gt;willowandsagefarms@gmail.com&lt;/a&gt;&#xA;      &lt;/p&gt;&#xA;      &lt;br&gt;&#xA;      &lt;h2 style=&#34;margin:0 0 0.5rem 0&#34;&gt;Socials:&lt;/h2&gt;&#xA;      &lt;p style=&#34;margin:0 0 0.75rem 0&#34;&gt;&#xA;        Instagram and Facebook: &lt;strong&gt;@willowandsagefarms&lt;/strong&gt;&#xA;      &lt;/p&gt;&#xA;      &lt;br&gt;&#xA;      &lt;h2 style=&#34;margin:0 0 0.5rem 0&#34;&gt;Pickup and Delivery&lt;/h2&gt;&#xA;      &lt;ul style=&#34;list-style:none;margin:0 0 0 1rem;padding:0;color:#333&#34;&gt;&#xA;        &lt;li style=&#34;margin-bottom:0.4rem&#34;&gt;Pickup by arrangement in Langley and nearby areas.&lt;/li&gt;&#xA;        &lt;li style=&#34;margin-bottom:0.4rem&#34;&gt;Local delivery available across the Lower Mainland. &lt;br&gt; Free delivery in Langley. Flat fee of $5 for other areas in the Lower Mainland.&lt;/li&gt;&#xA;        &lt;li style=&#34;margin-bottom:0.4rem&#34;&gt;We bake Friday and pack orders for Saturday pickup and delivery. If you need something outside these days, ask and we will see if we can make it work.&lt;/li&gt;&#xA;      &lt;/ul&gt;&#xA;    &lt;/div&gt;&#xA;    &lt;!-- Contact Form --&gt;&#xA;    &lt;form class=&#34;contact-form&#34; action=&#34;mailto:willowandsagefarms@gmail.com&#34; method=&#34;post&#34; enctype=&#34;text/plain&#34; style=&#34;display:flex;flex-direction:column; align-items: center; justify-content: center; color:black;background:white;padding:1rem;border-radius:10px;box-shadow:0 2px 6px rgba(0,0,0,0.04);&#34;&gt;&#xA;      &lt;h2 style=&#34;font-size:1.1rem;margin:0 0 0.75rem 0&#34;&gt;Send us a message&lt;/h2&gt;&#xA;      &lt;label for=&#34;name&#34; style=&#34;display:block;margin-bottom:0.4rem;font-weight:600&#34;&gt;Name&lt;/label&gt;&#xA;      &lt;input id=&#34;name&#34; name=&#34;Name&#34; type=&#34;text&#34; required style=&#34;width:80%;padding:0.6rem;border:1px solid #e6e6e6;border-radius:6px;margin-bottom:0.75rem&#34;&gt;&#xA;      &lt;label for=&#34;email&#34; style=&#34;display:block;margin-bottom:0.4rem;font-weight:600&#34;&gt;Email&lt;/label&gt;&#xA;      &lt;input id=&#34;email&#34; name=&#34;Email&#34; type=&#34;email&#34; required style=&#34;width:80%;padding:0.6rem;border:1px solid #e6e6e6;border-radius:6px;margin-bottom:0.75rem&#34;&gt;&#xA;      &lt;label for=&#34;order-type&#34; style=&#34;display:block;margin-bottom:0.4rem;font-weight:600&#34;&gt;Reason for contact&lt;/label&gt;&#xA;      &lt;select id=&#34;order-type&#34; name=&#34;Reason&#34; style=&#34;width:80%;padding:0.6rem;border:1px solid #e6e6e6;border-radius:6px;margin-bottom:0.75rem&#34;&gt;&#xA;        &lt;option&gt;General question&lt;/option&gt;&#xA;        &lt;option&gt;Place an order&lt;/option&gt;&#xA;        &lt;option&gt;Pickup or delivery&lt;/option&gt;&#xA;        &lt;option&gt;Wholesale / event&lt;/option&gt;&#xA;        &lt;option&gt;Other&lt;/option&gt;&#xA;      &lt;/select&gt;&#xA;      &lt;label for=&#34;message&#34; style=&#34;display:block;margin-bottom:0.4rem;font-weight:600&#34;&gt;Message&lt;/label&gt;&#xA;      &lt;textarea id=&#34;message&#34; name=&#34;Message&#34; rows=&#34;6&#34;  required style=&#34;resize: none;width:80%;padding:0.6rem;border:1px solid #e6e6e6;border-radius:6px;margin-bottom:0.75rem&#34; placeholder=&#34;Tell us what you need, preferred pickup or delivery date, and any dietary notes&#34;&gt;&lt;/textarea&gt;&#xA;      &lt;button type=&#34;submit&#34; style=&#34;display:inline-block;padding:0.6rem 1rem;border-radius:8px;border:none;background:#2a7f4f;color:white;font-weight:700;cursor:pointer&#34;&gt;Send message&lt;/button&gt;&#xA;      &lt;small style=&#34;display:block;margin-top:0.6rem;color:#666&#34;&gt;If the form does not work for you, please email &lt;a href=&#34;mailto:willowandsagefarms@gmail.com&#34;&gt;willowandsagefarms@gmail.com&lt;/a&gt;&lt;/small&gt;&#xA;    &lt;/form&gt;&#xA;  &lt;/div&gt;&#xA;&lt;/section&gt;</description>
     </item>
     <item>
       <title>Meet the Team</title>
-      <link>http://localhost:1313/meet-the-team/</link>
+      <link>https://www.willowandsagefarms.com/meet-the-team/</link>
       <pubDate>Fri, 28 Nov 2025 18:59:17 -0800</pubDate>
-      <guid>http://localhost:1313/meet-the-team/</guid>
-      <description>&lt;p&gt;Willow and Sage Farms is a tiny home based sourdough bakery with a whole lot of love behind it. We keep things small, fresh, and personal and every loaf comes straight from our kitchen to your table.&lt;/p&gt;&#xA;&lt;div class=&#34;meet-the-team&#34;&gt;&#xA;    &lt;br&gt;&#xA;    &lt;h2 style=&#34;margin: 0;&#34;&gt;Farmer Megan Lund&lt;/h2&gt;&#xA;    &lt;br&gt;&#xA;    &lt;img width= &#34;200px&#34; height= &#34;200px&#34; style=&#34;border-radius: 1rem;&#34; src=&#34;http://localhost:1313/images/meet-the-team/megan.jpg&#34; alt=&#34;Portrait of Farmer Megan Lund&#34;&gt;&lt;/img&gt;&#xA;    &lt;p&gt;&#xA;    &lt;span style= &#34;font-size: 1.5rem;&#34;&gt; Megan is the baker. &lt;/span&gt; &lt;br&gt;&#xA;    She mixes, shapes, and bakes every loaf, cookie, cracker, and bagel that we sell.&lt;br&gt;&#xA;    She handles recipe testing, weekly production, packaging, and all the little details that make each market morning run smoothly.&lt;br&gt;&#xA;    &lt;br&gt;&#xA;    &lt;i&gt; If it comes out of the oven, Megan made it! &lt;/i&gt;&#xA;    &lt;/p&gt;</description>
+      <guid>https://www.willowandsagefarms.com/meet-the-team/</guid>
+      <description>&lt;p&gt;Willow and Sage Farms is a tiny home based sourdough bakery with a whole lot of love behind it. We keep things small, fresh, and personal and every loaf comes straight from our kitchen to your table.&lt;/p&gt;&#xA;&lt;div class=&#34;meet-the-team&#34;&gt;&#xA;    &lt;br&gt;&#xA;    &lt;h2 style=&#34;margin: 0;&#34;&gt;Farmer Megan Lund&lt;/h2&gt;&#xA;    &lt;br&gt;&#xA;    &lt;img width= &#34;200px&#34; height= &#34;200px&#34; style=&#34;border-radius: 1rem;&#34; src=&#34;https://www.willowandsagefarms.com/images/meet-the-team/megan.jpg&#34; alt=&#34;Portrait of Farmer Megan Lund&#34;&gt;&lt;/img&gt;&#xA;    &lt;p&gt;&#xA;    &lt;span style= &#34;font-size: 1.5rem;&#34;&gt; Megan is the baker. &lt;/span&gt; &lt;br&gt;&#xA;    She mixes, shapes, and bakes every loaf, cookie, cracker, and bagel that we sell.&lt;br&gt;&#xA;    She handles recipe testing, weekly production, packaging, and all the little details that make each market morning run smoothly.&lt;br&gt;&#xA;    &lt;br&gt;&#xA;    &lt;i&gt; If it comes out of the oven, Megan made it! &lt;/i&gt;&#xA;    &lt;/p&gt;</description>
     </item>
     <item>
       <title>Bagel</title>
-      <link>http://localhost:1313/farmstore/bread/bagel-plain-4pack/</link>
+      <link>https://www.willowandsagefarms.com/farmstore/bread/bagel-plain-4pack/</link>
       <pubDate>Thu, 27 Nov 2025 14:44:53 -0800</pubDate>
-      <guid>http://localhost:1313/farmstore/bread/bagel-plain-4pack/</guid>
+      <guid>https://www.willowandsagefarms.com/farmstore/bread/bagel-plain-4pack/</guid>
       <description></description>
     </item>
     <item>
       <title>Pumkpin Bumpkin</title>
-      <link>http://localhost:1313/farmstore/cookies/pumpkin-spice-cookie-4oz-single/</link>
+      <link>https://www.willowandsagefarms.com/farmstore/cookies/pumpkin-spice-cookie-4oz-single/</link>
       <pubDate>Thu, 27 Nov 2025 14:33:27 -0800</pubDate>
-      <guid>http://localhost:1313/farmstore/cookies/pumpkin-spice-cookie-4oz-single/</guid>
+      <guid>https://www.willowandsagefarms.com/farmstore/cookies/pumpkin-spice-cookie-4oz-single/</guid>
       <description></description>
     </item>
     <item>
       <title>Dark &amp; Twisty</title>
-      <link>http://localhost:1313/farmstore/cookies/chocolate-pretzel-cookie-4oz-single/</link>
+      <link>https://www.willowandsagefarms.com/farmstore/cookies/chocolate-pretzel-cookie-4oz-single/</link>
       <pubDate>Thu, 27 Nov 2025 14:33:07 -0800</pubDate>
-      <guid>http://localhost:1313/farmstore/cookies/chocolate-pretzel-cookie-4oz-single/</guid>
+      <guid>https://www.willowandsagefarms.com/farmstore/cookies/chocolate-pretzel-cookie-4oz-single/</guid>
       <description></description>
     </item>
     <item>
       <title>Cow Cookie</title>
-      <link>http://localhost:1313/farmstore/cookies/cow-cookie-4oz-single/</link>
+      <link>https://www.willowandsagefarms.com/farmstore/cookies/cow-cookie-4oz-single/</link>
       <pubDate>Thu, 27 Nov 2025 14:32:54 -0800</pubDate>
-      <guid>http://localhost:1313/farmstore/cookies/cow-cookie-4oz-single/</guid>
+      <guid>https://www.willowandsagefarms.com/farmstore/cookies/cow-cookie-4oz-single/</guid>
       <description></description>
     </item>
     <item>
       <title>Blueberry Jam</title>
-      <link>http://localhost:1313/farmstore/pantry/blueberry-jam-250ml/</link>
+      <link>https://www.willowandsagefarms.com/farmstore/pantry/blueberry-jam-250ml/</link>
       <pubDate>Wed, 26 Nov 2025 13:17:16 -0800</pubDate>
-      <guid>http://localhost:1313/farmstore/pantry/blueberry-jam-250ml/</guid>
+      <guid>https://www.willowandsagefarms.com/farmstore/pantry/blueberry-jam-250ml/</guid>
       <description></description>
     </item>
     <item>
       <title>English Muffins</title>
-      <link>http://localhost:1313/farmstore/bread/english-muffins-plain-4pack/</link>
+      <link>https://www.willowandsagefarms.com/farmstore/bread/english-muffins-plain-4pack/</link>
       <pubDate>Wed, 26 Nov 2025 13:16:39 -0800</pubDate>
-      <guid>http://localhost:1313/farmstore/bread/english-muffins-plain-4pack/</guid>
+      <guid>https://www.willowandsagefarms.com/farmstore/bread/english-muffins-plain-4pack/</guid>
       <description></description>
     </item>
     <item>
       <title>Gingerdoodle</title>
-      <link>http://localhost:1313/farmstore/cookies/gingerbread-cookie-4oz-single/</link>
+      <link>https://www.willowandsagefarms.com/farmstore/cookies/gingerbread-cookie-4oz-single/</link>
       <pubDate>Wed, 26 Nov 2025 13:15:59 -0800</pubDate>
-      <guid>http://localhost:1313/farmstore/cookies/gingerbread-cookie-4oz-single/</guid>
+      <guid>https://www.willowandsagefarms.com/farmstore/cookies/gingerbread-cookie-4oz-single/</guid>
       <description></description>
     </item>
     <item>
       <title>Campfire Cocoa</title>
-      <link>http://localhost:1313/farmstore/cookies/chocolate-marshmellow-cookie-4oz-single/</link>
+      <link>https://www.willowandsagefarms.com/farmstore/cookies/chocolate-marshmellow-cookie-4oz-single/</link>
       <pubDate>Wed, 26 Nov 2025 13:15:48 -0800</pubDate>
-      <guid>http://localhost:1313/farmstore/cookies/chocolate-marshmellow-cookie-4oz-single/</guid>
+      <guid>https://www.willowandsagefarms.com/farmstore/cookies/chocolate-marshmellow-cookie-4oz-single/</guid>
       <description></description>
     </item>
     <item>
       <title>Candy Cane Crunch</title>
-      <link>http://localhost:1313/farmstore/cookies/mint-chocolate-cookie-4oz-single/</link>
+      <link>https://www.willowandsagefarms.com/farmstore/cookies/mint-chocolate-cookie-4oz-single/</link>
       <pubDate>Wed, 26 Nov 2025 13:15:33 -0800</pubDate>
-      <guid>http://localhost:1313/farmstore/cookies/mint-chocolate-cookie-4oz-single/</guid>
+      <guid>https://www.willowandsagefarms.com/farmstore/cookies/mint-chocolate-cookie-4oz-single/</guid>
       <description></description>
     </item>
     <item>
       <title>Garlic &amp; Parmesan Loaf</title>
-      <link>http://localhost:1313/farmstore/bread/garlic-parm-loaf-1lb/</link>
+      <link>https://www.willowandsagefarms.com/farmstore/bread/garlic-parm-loaf-1lb/</link>
       <pubDate>Wed, 26 Nov 2025 12:00:03 -0800</pubDate>
-      <guid>http://localhost:1313/farmstore/bread/garlic-parm-loaf-1lb/</guid>
+      <guid>https://www.willowandsagefarms.com/farmstore/bread/garlic-parm-loaf-1lb/</guid>
       <description>&lt;p&gt;This will have more information and an image later.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Classic Loaf</title>
-      <link>http://localhost:1313/farmstore/bread/plain-loaf-1lb/</link>
+      <link>https://www.willowandsagefarms.com/farmstore/bread/plain-loaf-1lb/</link>
       <pubDate>Wed, 26 Nov 2025 10:41:42 -0800</pubDate>
-      <guid>http://localhost:1313/farmstore/bread/plain-loaf-1lb/</guid>
+      <guid>https://www.willowandsagefarms.com/farmstore/bread/plain-loaf-1lb/</guid>
       <description></description>
     </item>
   </channel>
