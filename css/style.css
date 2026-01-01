@@ -90,7 +90,7 @@ footer {
   margin: 0;
   padding: 0;
   color: var(--color-1);
-  gap: 3rem;
+  gap: 2rem;
 }
 
 .shopping-cart-icon {
@@ -224,6 +224,19 @@ footer {
   margin: 0;
 }
 
+.price-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.price-container p {
+  padding: 0rem;
+  margin: 0;
+}
+
 /* MEET THE TEAM */
 .meet-the-team .note {
   background-color: var(--color-6);
@@ -326,19 +339,20 @@ footer {
   border-radius: 8px;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
   .site-nav,
   .main-menu {
     flex-direction: column;
   }
 
+  .site-nav {
+    margin: 0 1rem;
+  }
+
   .site-nav a {
     padding: 0.5rem;
     padding-left: 0;
-  }
-
-  .site-nav {
-  padding-bottom: rem;
+    margin: 0;
   }
 
   .store-search {
@@ -380,7 +394,7 @@ footer {
 }
 
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1400px) {
   .product-card-grid {
   display: grid;
   grid-template-columns: auto auto auto;
@@ -435,9 +449,4 @@ footer {
   justify-content: center;
   max-height: 90vh;
   overflow: hidden;
-}
-
-.hero-section video {
-  height: 100%;
-
 }

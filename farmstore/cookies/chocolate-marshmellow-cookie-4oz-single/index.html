@@ -44,23 +44,24 @@
 <a class="back-button" href="/farmstore/">Back to Farmstore</a>
 
 <section class="product-page-grid">
-    <img src="/images/notavailable.png" alt="" class="main-img">
+    <img src="/images/notavailable.png" alt="a picture of the Campfire Cocoa" class="main-img">
     <div class="product-page-text-container">
       <h2>Campfire Cocoa</h2>
       <p>This cookie tastes like curling up by the fire with a mug of hot chocolate. We start with browned butter for a deep, toffee like flavour, add a rich cocoa dough, and fold in gooey little marshmallow bits plus plenty of chocolate chips. The sourdough discard keeps them soft and chewy in the middle with just the right amount of fudgy goodness. It is a winter favourite but honestly perfect any day a chocolate craving hits. Made for cookie lovers of all ages.</p>
       <p> <span style="font-weight: bolder;">Ingredients:</span> Browned butter (milk), coffee, granulated sugar, light brown sugar, sourdough starter (flour, water), egg yolks, vanilla extract, all purpose flour, bread flour, cocoa powder, baking soda, baking powder, sea salt, marshmallow bits, chocolate chips.</p>
       <p><i>Prepared with care in our home kitchen, which may also handle common food allergens. Our products are crafted fresh by hand to taste amazing and are not inspected by Fraser Health Authority.</i></p>
       
-      <div class="price-container">
+      <div id="price-container" class="price-container">
           <p class="product-price">$3.00</p>
-          <p class="stock-label" data-item-id="chocolate-marshmellow-cookie-4oz-single"></p>
+          
+          <p id="stock-label" class="stock-label"></p> 
       </div>
-      <div class="quantity-container">
+      <div id="quantity-container" class="quantity-container">
         <label for="quantity-Campfire Cocoa">Quantity:</label>
         <input type="number" id="quantity-Campfire Cocoa" value="1" min="1" style="width:50px; margin-right:10px;">
       </div>
-      <button 
-          class="snipcart-add-item"
+      <button
+          class="snipcart-add-item buy-button"
           data-item-id="chocolate-marshmellow-cookie-4oz-single"
           data-item-price="3.00"
           data-item-description="Small batch, handmade, soft, sourdough, chocolate and marshmellow cookie."
@@ -75,17 +76,17 @@
 </section>
 
 <script>
-document.addEventListener('snipcart.ready', () => {
-  const itemId = "chocolate-marshmellow-cookie-4oz-single"
-  Snipcart.api.items.get(itemId).then(item => {
-    const label = document.querySelector('.stock-label')
-    if (item.stock > 0) {
-      label.textContent = item.stock + " in stock"
-    } else {
-      label.textContent = "Sold Out"
-      document.querySelector('.snipcart-add-item').disabled = true
-    }
-  })
+document.addEventListener('DOMContentLoaded', () => {
+  const stockLabel = document.querySelector('.stock-label')
+  const quantityContainer = document.querySelector('.quantity-container')
+  const buyButton = document.querySelector('.buy-button')
+
+  if (!stockLabel || !quantityContainer) return
+
+  if (stockLabel.textContent.trim().toLowerCase() === 'sold out') {
+    quantityContainer.style.display = 'none'
+    buyButton.style.display = 'none'
+  }
 })
 </script>
 
