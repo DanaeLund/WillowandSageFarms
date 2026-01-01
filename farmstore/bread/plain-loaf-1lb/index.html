@@ -44,23 +44,24 @@
 <a class="back-button" href="/farmstore/">Back to Farmstore</a>
 
 <section class="product-page-grid">
-    <img src="/images/classic-loaf.png" alt="" class="main-img">
+    <img src="/images/classic-loaf.png" alt="a picture of the Classic Loaf" class="main-img">
     <div class="product-page-text-container">
       <h2>Classic Loaf</h2>
       <p>Simple, wholesome, and full of natural flavor. Our Classic Sourdough is made with a mix of bread flour, all-purpose flour, and a touch of whole wheat for depth. Every loaf is hand-shaped and naturally leavened with our sourdough starter, giving it a tender crumb, crisp crust, and that gentle tang that makes sourdough so comforting. Perfect for sandwiches, toast, or just enjoying fresh from the oven.</p>
       <p> <span style="font-weight: bolder;">Ingredients:</span> Unbleached bread flour, all-purpose flour, whole wheat bread flour, water, sourdough starter (flour, water), sea salt.</p>
       <p><i>Prepared with care in our home kitchen, which may also handle common food allergens. Our products are crafted fresh by hand to taste amazing and are not inspected by Fraser Health Authority.</i></p>
       
-      <div class="price-container">
+      <div id="price-container" class="price-container">
           <p class="product-price">$8.00</p>
-          <p class="stock-label" data-item-id="plain-loaf-1lb"></p>
+          
+          <p id="stock-label" class="stock-label"></p> 
       </div>
-      <div class="quantity-container">
+      <div id="quantity-container" class="quantity-container">
         <label for="quantity-Classic Loaf">Quantity:</label>
         <input type="number" id="quantity-Classic Loaf" value="1" min="1" style="width:50px; margin-right:10px;">
       </div>
-      <button 
-          class="snipcart-add-item"
+      <button
+          class="snipcart-add-item buy-button"
           data-item-id="plain-loaf-1lb"
           data-item-price="8.00"
           data-item-description="Small batch, handmade, soft, artisanal, sourdough loaves with a classic flavour. "
@@ -75,17 +76,17 @@
 </section>
 
 <script>
-document.addEventListener('snipcart.ready', () => {
-  const itemId = "plain-loaf-1lb"
-  Snipcart.api.items.get(itemId).then(item => {
-    const label = document.querySelector('.stock-label')
-    if (item.stock > 0) {
-      label.textContent = item.stock + " in stock"
-    } else {
-      label.textContent = "Sold Out"
-      document.querySelector('.snipcart-add-item').disabled = true
-    }
-  })
+document.addEventListener('DOMContentLoaded', () => {
+  const stockLabel = document.querySelector('.stock-label')
+  const quantityContainer = document.querySelector('.quantity-container')
+  const buyButton = document.querySelector('.buy-button')
+
+  if (!stockLabel || !quantityContainer) return
+
+  if (stockLabel.textContent.trim().toLowerCase() === 'sold out') {
+    quantityContainer.style.display = 'none'
+    buyButton.style.display = 'none'
+  }
 })
 </script>
 

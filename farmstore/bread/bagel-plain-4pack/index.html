@@ -44,23 +44,24 @@
 <a class="back-button" href="/farmstore/">Back to Farmstore</a>
 
 <section class="product-page-grid">
-    <img src="/images/notavailable.png" alt="" class="main-img">
+    <img src="/images/notavailable.png" alt="a picture of the Bagel" class="main-img">
     <div class="product-page-text-container">
       <h2>Bagel</h2>
       <p>Chewy, hearty and full of flavour. Our sourdough bagels are hand rolled and given plenty of time to ferment so they bake up with a great crust and soft center. A touch of honey adds a gentle sweetness that balances the natural sourdough tang. Toast them for breakfast, stack them into a lunch sandwich or enjoy one warm with cream cheese right away.</p>
       <p> <span style="font-weight: bolder;">Ingredients:</span> Unbleached bread flour, unbleached all-purpose flour, water, sourdough starter (flour, water), sea salt, honey, egg</p>
       <p><i>Prepared with care in our home kitchen, which may also handle common food allergens. Our products are crafted fresh by hand to taste amazing and are not inspected by Fraser Health Authority.</i></p>
       
-      <div class="price-container">
+      <div id="price-container" class="price-container">
           <p class="product-price">$8.00</p>
-          <p class="stock-label" data-item-id="bagel-plain-4pack"></p>
+          
+          <p id="stock-label" class="stock-label"></p> 
       </div>
-      <div class="quantity-container">
+      <div id="quantity-container" class="quantity-container">
         <label for="quantity-Bagel">Quantity:</label>
         <input type="number" id="quantity-Bagel" value="1" min="1" style="width:50px; margin-right:10px;">
       </div>
-      <button 
-          class="snipcart-add-item"
+      <button
+          class="snipcart-add-item buy-button"
           data-item-id="bagel-plain-4pack"
           data-item-price="8.00"
           data-item-description="Small batch, handmade, chewy, artsinal, sourdough bagels sweetened with honey. "
@@ -75,17 +76,17 @@
 </section>
 
 <script>
-document.addEventListener('snipcart.ready', () => {
-  const itemId = "bagel-plain-4pack"
-  Snipcart.api.items.get(itemId).then(item => {
-    const label = document.querySelector('.stock-label')
-    if (item.stock > 0) {
-      label.textContent = item.stock + " in stock"
-    } else {
-      label.textContent = "Sold Out"
-      document.querySelector('.snipcart-add-item').disabled = true
-    }
-  })
+document.addEventListener('DOMContentLoaded', () => {
+  const stockLabel = document.querySelector('.stock-label')
+  const quantityContainer = document.querySelector('.quantity-container')
+  const buyButton = document.querySelector('.buy-button')
+
+  if (!stockLabel || !quantityContainer) return
+
+  if (stockLabel.textContent.trim().toLowerCase() === 'sold out') {
+    quantityContainer.style.display = 'none'
+    buyButton.style.display = 'none'
+  }
 })
 </script>
 
