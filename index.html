@@ -40,6 +40,127 @@
 <main class="content">
 
 
+
+<section id="bread-drop-banner" class="bread-drop-banner" style="background:#6A7752; color:white; text-align:center; padding:10px; position:relative; overflow:hidden;">
+  <p id="countdown-text" class="countdown-text" style="margin:0; font-size:1.5rem; font-weight:bold;">Orders Resume In:</p>
+  <p id="countdown-timer" class="countdown-timer" style="font-size:2rem; margin:0; font-family:Nothing You Could Do, cursive;">
+    Loading countdown...
+  </p>
+</section>
+
+<style>
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.02); opacity: 0.9; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+#bread-drop-banner {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+#bread-drop-banner.active {
+  animation: pulse 1.5s infinite;
+}
+
+ 
+@media (max-width: 600px) {
+  .hero-slider {
+    height: 30vh;  
+  }
+}
+
+ 
+@media (max-width: 420px) {
+  #bread-drop-banner {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+}
+</style>
+
+<script>
+ 
+const dropStart = new Date("2026-02-28T12:45:00-08:00").getTime(); 
+const dropEnd = dropStart + (24 * 60 * 60 * 1000); 
+const nextDropStart = dropStart + (7 * 24 * 60 * 60 * 1000); 
+
+const countdownTextElement = document.getElementById("countdown-text");
+const countdownElement = document.getElementById("countdown-timer");
+const banner = document.getElementById("bread-drop-banner");
+
+ 
+function disableCart() {
+  document.querySelectorAll(".snipcart-add-item").forEach(btn => {
+    btn.disabled = true;
+    btn.style.opacity = 0.5;
+    btn.title = "Available at the bread drop";
+  });
+}
+
+function enableCart() {
+  document.querySelectorAll(".snipcart-add-item").forEach(btn => {
+    btn.disabled = false;
+    btn.style.opacity = 1;
+    btn.title = "";
+  });
+}
+
+ 
+function updateCountdownDisplay(distance) {
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+  countdownElement.textContent = `${days}d ${hours}h ${minutes}m`;
+}
+
+ 
+function updateCountdown() {
+  const now = new Date().getTime();
+
+  
+  if (now < dropStart) {
+    const distance = dropStart - now;
+    updateCountdownDisplay(distance);
+    disableCart();
+    countdownTextElement.textContent = `Next Bread Drop In:`;
+    return;
+  }
+
+  
+  if (now >= dropStart && now < dropEnd) {
+    countdownElement.textContent = "Bread Drop is live. First come, first serve. Limited quantities.";
+    banner.classList.add("active");
+    enableCart();
+    countdownTextElement.textContent = ``;
+    return;
+  }
+
+  
+  if (now >= dropEnd) {
+    const distance = nextDropStart - now;
+    updateCountdownDisplay(distance);
+    disableCart();
+    countdownTextElement.textContent = `Next Bread Drop In:`;
+    return;
+  }
+}
+
+ 
+disableCart();
+updateCountdown();
+const countdownInterval = setInterval(updateCountdown, 1000);
+</script>
+
+
 <style>
 .hero-slider {
   position: relative;
@@ -69,7 +190,14 @@
  
 @media (max-width: 600px) {
   .hero-slider {
-    height: 40vh;  
+    height: 30vh;  
+  }
+}
+
+ 
+@media (max-width: 400px) {
+  .hero-slider {
+    height: 25vh;  
   }
 }
 
@@ -78,8 +206,8 @@
 <section class="hero-section">
     <div class="hero-slider">
         <img src="/images/hero-images/we-are-moving-annoucement.png" class="active" alt="hero image 1">
-        <img src="/images/hero-images/hero1.jpg" alt="hero image 2">
-        <img src="/images/hero-images/hero2.jpg" alt="hero image 3">
+        <img src="/images/hero-images/bread-drop.png" alt="hero image 2">
+        <img src="/images/hero-images/hero1.png" alt="hero image 3">
     </div>
 </section>
 
@@ -213,7 +341,7 @@
 </main>
 	
 <footer>
-	<p>&copy;2025 Willow and Sage Farms</p>
+	<p>&copy;2026 Willow and Sage Farms</p>
 </footer>
 
 </body>
