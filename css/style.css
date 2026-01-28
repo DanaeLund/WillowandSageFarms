@@ -339,6 +339,10 @@ footer {
   border-radius: 8px;
 }
 
+summary {
+  font-size: 2rem;
+}
+
 @media screen and (max-width: 1000px) {
   .site-nav,
   .main-menu {
