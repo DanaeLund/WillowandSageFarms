@@ -36,12 +36,102 @@
       
          
       
-      <button class="snipcart-checkout remove-style">
+      <button class="snipcart-checkout remove-style cart-button">
         <img class="shopping-cart-icon" src="/images/shopping cart.svg" alt="">
+        <span id="cart-count" class="cart-count">0</span>
       </button>
+
     </ul>
   </nav>
 </header>
+
+<script>
+document.addEventListener("snipcart.ready", () => {
+  const cartCount = document.getElementById("cart-count");
+
+  function updateCartCount() {
+    const state = Snipcart.store.getState();
+    if (!state || !state.cart) return;
+
+    const items = state.cart.items.items;
+
+    const totalQty = items.reduce((sum, item) => {
+      return sum + item.quantity;
+    }, 0);
+
+    cartCount.textContent = totalQty;
+    cartCount.style.display = totalQty > 0 ? "flex" : "none";
+  }
+
+  
+  updateCartCount();
+
+  
+  Snipcart.store.subscribe(updateCartCount);
+});
+</script>
+
+
+
+<section class="shipping-banner">
+  <div class="scroll-wrapper">
+    <div class="scroll-track">
+      <span>Free Local Delivery for orders $50+ CAD before tax.</span>
+      <span>Free Local Delivery for orders $50+ CAD before tax.</span>
+      <span>Free Local Delivery for orders $50+ CAD before tax.</span>
+
+      
+      <span>Free Local Delivery for orders $50+ CAD before tax.</span>
+      <span>Free Local Delivery for orders $50+ CAD before tax.</span>
+      <span>Free Local Delivery for orders $50+ CAD before tax.</span>
+    </div>
+  </div>
+</section>
+
+<style>
+.shipping-banner {
+  background: #6A7752;
+  color: white;
+  overflow: hidden;
+  font-family: "Poiret One", sans-serif;
+}
+
+.scroll-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.scroll-track {
+  display: flex;
+  gap: 5rem;
+  width: max-content;
+  animation: scroll 30s linear infinite;
+  padding: 0.75rem 0;
+}
+
+.scroll-track span {
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+ 
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+ 
+@media (max-width: 420px) {
+  .scroll-track {
+    animation-duration: 14s;
+  }
+}
+</style>
+
 
 <div class="store-search">
   <p class="alt-text" style="text-align: center;">Search by product name or ingredient</p>
