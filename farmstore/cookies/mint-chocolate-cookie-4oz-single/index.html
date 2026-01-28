@@ -34,12 +34,41 @@
       
          
       
-      <button class="snipcart-checkout remove-style">
+      <button class="snipcart-checkout remove-style cart-button">
         <img class="shopping-cart-icon" src="/images/shopping cart.svg" alt="">
+        <span id="cart-count" class="cart-count">0</span>
       </button>
+
     </ul>
   </nav>
 </header>
+
+<script>
+document.addEventListener("snipcart.ready", () => {
+  const cartCount = document.getElementById("cart-count");
+
+  function updateCartCount() {
+    const state = Snipcart.store.getState();
+    if (!state || !state.cart) return;
+
+    const items = state.cart.items.items;
+
+    const totalQty = items.reduce((sum, item) => {
+      return sum + item.quantity;
+    }, 0);
+
+    cartCount.textContent = totalQty;
+    cartCount.style.display = totalQty > 0 ? "flex" : "none";
+  }
+
+  
+  updateCartCount();
+
+  
+  Snipcart.store.subscribe(updateCartCount);
+});
+</script>
+
 
 <a class="back-button" href="/farmstore/">Back to Farmstore</a>
 
@@ -56,10 +85,10 @@
           
           <p id="stock-label" class="stock-label"></p> 
       </div>
-      <div id="quantity-container" class="quantity-container">
-        <label for="quantity-Candy Cane Crunch">Quantity:</label>
-        <input type="number" id="quantity-Candy Cane Crunch" value="1" min="1" style="width:50px; margin-right:10px;">
-      </div>
+      <p style="color: rgb(255, 251, 33); font-weight: bolder; text-align: center;">
+  ⚠️ Please note: We only deliver to the Sunshine Coast (Halfmoon Bay, Pender Harbour, Gibsons, and Keats Island (June, July, August)). Orders outside this area cannot be shipped. ⚠️ 
+</p>
+
       <button
           class="snipcart-add-item buy-button"
           data-item-id="mint-chocolate-cookie-4oz-single"
@@ -69,6 +98,7 @@
           data-item-name="Candy Cane Crunch"
           data-item-quantity="1"
           data-item-stackable="true"
+          data-item-shippable="true"
           onclick="this.innerText='Added to cart!'; this.style.backgroundColor='#6A7752'; this.style.color='#ffffff'; setTimeout(() => { this.innerText='Add to cart'; this.style.color='#2D3B23'; this.style.backgroundColor='#ffffff';}, 2000); ">
           Add to cart
         </button>
@@ -109,4 +139,54 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     (()=>{var c,d;(d=(c=window.SnipcartSettings).version)!=null||(c.version="3.0");var s,S;(S=(s=window.SnipcartSettings).timeoutDuration)!=null||(s.timeoutDuration=2750);var l,p;(p=(l=window.SnipcartSettings).domain)!=null||(l.domain="cdn.snipcart.com");var w,u;(u=(w=window.SnipcartSettings).protocol)!=null||(w.protocol="https");var f=window.SnipcartSettings.version.includes("v3.0.0-ci")||window.SnipcartSettings.version!="3.0"&&window.SnipcartSettings.version.localeCompare("3.4.0",void 0,{numeric:!0,sensitivity:"base"})===-1,m=["focus","mouseover","touchmove","scroll","keydown"];window.LoadSnipcart=o;document.readyState==="loading"?document.addEventListener("DOMContentLoaded",r):r();function r(){window.SnipcartSettings.loadStrategy?window.SnipcartSettings.loadStrategy==="on-user-interaction"&&(m.forEach(t=>document.addEventListener(t,o)),setTimeout(o,window.SnipcartSettings.timeoutDuration)):o()}var a=!1;function o(){if(a)return;a=!0;let t=document.getElementsByTagName("head")[0],e=document.querySelector("#snipcart"),i=document.querySelector(`src[src^="${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}"][src$="snipcart.js"]`),n=document.querySelector(`link[href^="${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}"][href$="snipcart.css"]`);e||(e=document.createElement("div"),e.id="snipcart",e.setAttribute("hidden","true"),document.body.appendChild(e)),v(e),i||(i=document.createElement("script"),i.src=`${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}/themes/v${window.SnipcartSettings.version}/default/snipcart.js`,i.async=!0,t.appendChild(i)),n||(n=document.createElement("link"),n.rel="stylesheet",n.type="text/css",n.href=`${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}/themes/v${window.SnipcartSettings.version}/default/snipcart.css`,t.prepend(n)),m.forEach(g=>document.removeEventListener(g,o))}function v(t){!f||(t.dataset.apiKey=window.SnipcartSettings.publicApiKey,window.SnipcartSettings.addProductBehavior&&(t.dataset.configAddProductBehavior=window.SnipcartSettings.addProductBehavior),window.SnipcartSettings.modalStyle&&(t.dataset.configModalStyle=window.SnipcartSettings.modalStyle),window.SnipcartSettings.currency&&(t.dataset.currency=window.SnipcartSettings.currency),window.SnipcartSettings.templatesUrl&&(t.dataset.templatesUrl=window.SnipcartSettings.templatesUrl))}})();
+
+</script>
+
+<script>
+const allowedFSAs = ["V0N"];
+const allowedTowns = [
+  "Halfmoon Bay",
+  "Madeira Park",
+  "Pender Harbour",
+  "Garden Bay",
+  "Egmont",
+  "Gibsons",
+  "Roberts Creek",
+  "Keats Island"
+];
+
+document.addEventListener('snipcart.ready', function() {
+  Snipcart.events.on('snipcart.checkout.ready', function() {
+
+    Snipcart.events.on('snipcart.checkout.shipping-address-changed', function(address) {
+      const postalFSA = address.postalCode ? address.postalCode.substring(0,3).toUpperCase() : "";
+      const town = (address.city || "").trim();
+
+      
+      let existing = document.querySelector("#delivery-warning");
+      if (existing) existing.remove();
+
+      if (!allowedFSAs.includes(postalFSA) && !allowedTowns.includes(town)) {
+        
+        const warning = document.createElement("div");
+        warning.id = "delivery-warning";
+        warning.style.color = "red";
+        warning.style.fontWeight = "bold";
+        warning.style.margin = "1em 0";
+        warning.innerText = "Sorry, we currently only deliver to the Sunshine Coast (Halfmoon Bay, Pender Harbour, Gibsons, etc.)";
+        const checkoutContent = document.querySelector(".snipcart-checkout-content");
+        if (checkoutContent) checkoutContent.prepend(warning);
+
+        
+        const btn = document.querySelector(".snipcart__checkout__continue-button");
+        if (btn) btn.disabled = true;
+      } else {
+        
+        const btn = document.querySelector(".snipcart__checkout__continue-button");
+        if (btn) btn.disabled = false;
+      }
+    });
+
+  });
+});
 </script>
