@@ -44,7 +44,9 @@
       
          
       
-      <button class="snipcart-checkout remove-style cart-button">
+      <button
+       style="display: none"
+       class="snipcart-checkout remove-style cart-button">
         <img class="shopping-cart-icon" src="/images/shopping cart.svg" alt="">
         <span id="cart-count" class="cart-count">0</span>
       </button>
@@ -91,7 +93,7 @@ document.addEventListener("snipcart.ready", () => {
       <p><i>Prepared with care in our home kitchen, which may also handle common food allergens. Our products are crafted fresh by hand to taste amazing and are not inspected by Fraser Health Authority.</i></p>
       
       <div id="price-container" class="price-container">
-          <p class="product-price">$3.00</p>
+          <p class="product-price">$4.00</p>
           
           <p id="stock-label" class="stock-label"></p> 
       </div>
@@ -99,10 +101,10 @@ document.addEventListener("snipcart.ready", () => {
   ⚠️ Please note: We only deliver to the Sunshine Coast (Halfmoon Bay, Pender Harbour, Gibsons, and Keats Island (June, July, August)). <br>Orders outside this area cannot be shipped. ⚠️ 
 </p>
 
-      <button
+      <button style="display: none"
           class="snipcart-add-item buy-button"
           data-item-id="chocolate-marshmellow-cookie-4oz-single"
-          data-item-price="3.00"
+          data-item-price="4.00"
           data-item-description="Small batch, handmade, soft, sourdough, chocolate and marshmellow cookie."
           data-item-image="/images/notavailable.png"
           data-item-name="Campfire Cocoa"

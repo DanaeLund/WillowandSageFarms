@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Boules on Willow and Sage Farms</title>
+    <link>http://localhost:1313/farmstore/bread/boules-copy/</link>
+    <description>Recent content in Boules on Willow and Sage Farms</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 27 Nov 2025 14:44:53 -0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/farmstore/bread/boules-copy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Classic</title>
+      <link>http://localhost:1313/farmstore/bread/boules-copy/boule-1lb-classic/</link>
+      <pubDate>Thu, 27 Nov 2025 14:44:53 -0800</pubDate>
+      <guid>http://localhost:1313/farmstore/bread/boules-copy/boule-1lb-classic/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Garlic &amp; Parmesan</title>
+      <link>http://localhost:1313/farmstore/bread/boules-copy/boule-1lb-garlic-parmesan/</link>
+      <pubDate>Thu, 27 Nov 2025 14:44:53 -0800</pubDate>
+      <guid>http://localhost:1313/farmstore/bread/boules-copy/boule-1lb-garlic-parmesan/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Garlic &amp; Rosemary</title>
+      <link>http://localhost:1313/farmstore/bread/boules-copy/boule-1lb-garlic-rosemary/</link>
+      <pubDate>Thu, 27 Nov 2025 14:44:53 -0800</pubDate>
+      <guid>http://localhost:1313/farmstore/bread/boules-copy/boule-1lb-garlic-rosemary/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Jalapeno &amp; Cheddar</title>
+      <link>http://localhost:1313/farmstore/bread/boules-copy/boule-1lb-jalapeno-cheddar/</link>
+      <pubDate>Thu, 27 Nov 2025 14:44:53 -0800</pubDate>
+      <guid>http://localhost:1313/farmstore/bread/boules-copy/boule-1lb-jalapeno-cheddar/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>White</title>
+      <link>http://localhost:1313/farmstore/bread/boules-copy/boule-1lb-white/</link>
+      <pubDate>Thu, 27 Nov 2025 14:44:53 -0800</pubDate>
+      <guid>http://localhost:1313/farmstore/bread/boules-copy/boule-1lb-white/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
