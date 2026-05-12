@@ -16,7 +16,7 @@
     --font-family: "Poiret One", sans-serif;
     --font-weight: bold;
     --font-style: normal;
-    --font-alt-family:  "Nothing You Could Do", cursive;
+    --font-family-cursive:  "Nothing You Could Do", cursive;
 }
 
 a {
@@ -255,7 +255,7 @@ footer {
 /* Stylization */
 
 .alt-text {
-  font-family: var(--font-alt-family);
+  font-family: var(--font-family-cursivey);
 }
 
 .button {
@@ -330,6 +330,7 @@ footer {
   box-shadow: #00000050 0px 8px 8px;
   padding-bottom: 0rem;
 }
+
 .store-search input {
   padding: 0.75rem 1rem;
   width: 100%;
@@ -342,6 +343,19 @@ footer {
 summary {
   font-size: 2rem;
 }
+
+details {
+  gap: 2rem;
+  max-width: 800px;
+  margin: auto;
+  padding: 1rem;
+}
+
+details ul li {
+  list-style: none;
+  padding: 1rem;
+}
+
 
 @media screen and (max-width: 1000px) {
   .site-nav,

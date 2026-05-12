@@ -10,7 +10,7 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-	<title>Dark &amp; Twisty | Willow and Sage Farms</title>
+	<title>Classic | Willow and Sage Farms</title>
 
 	<link rel="stylesheet" href="/css/style.css" type="text/css" media="all" />
 
@@ -44,7 +44,9 @@
       
          
       
-      <button class="snipcart-checkout remove-style cart-button">
+      <button
+       style="display: none"
+       class="snipcart-checkout remove-style cart-button">
         <img class="shopping-cart-icon" src="/images/shopping cart.svg" alt="">
         <span id="cart-count" class="cart-count">0</span>
       </button>
@@ -83,15 +85,15 @@ document.addEventListener("snipcart.ready", () => {
 <a class="back-button" href="/farmstore/">Back to Farmstore</a>
 
 <section class="product-page-grid">
-    <img src="/images/notavailable.png" alt="a picture of the Dark &amp; Twisty" class="main-img">
+    <img src="/images/notavailable.png" alt="a picture of the Classic" class="main-img">
     <div class="product-page-text-container">
-      <h2>Dark &amp; Twisty</h2>
-      <p>A little salty, a little sweet, and completely addictive. Dark and Twisty brings together rich chocolate chips, extra dark chocolate, and a dusting of crushed pretzels for a surprise crunch and a tiny hit of salt. The browned butter adds a deep caramel flavour while the sourdough discard keeps the center soft and chewy. It’s the cookie you reach for when you want something just a bit dramatic in the best way. For those who love a good dark chocolate treat.</p>
-      <p> <span style="font-weight: bolder;">Ingredients:</span> Browned butter (milk), water, granulated sugar, light brown sugar, sourdough starter (flour, water), egg yolks, vanilla extract, all purpose flour, baking soda, baking powder, sea salt, chocolate chips, dark chocolate chips, pretzel dust.</p>
-      <p><i>Prepared with care in our home kitchen, which may also handle common food allergens. Our products are crafted fresh by hand to taste amazing and are not inspected by Fraser Health Authority.</i></p>
+      <h2>Classic</h2>
+      <p>Soft, sliceable, naturally fermented and a slight bit of whole wheat flour for better flavour and texture. This everyday loaf has a tender crumb and light crust, making it perfect for sandwiches, toast, and family meals.</p>
+      <p> <span style="font-weight: bolder;">Ingredients:</span> Unbleached bread flour, unbleached all-purpose flour, sourdough starter (flour, water), milk, water, whole wheat bread flour, butter, honey, sea salt</p>
+      <p><i>Prepared with care in our home kitchen, which may also handle common food allergens. Our products are crafted fresh by hand to taste amazing and are not inspected by Vancouver Coastal Health Authority.</i></p>
       
       <div id="price-container" class="price-container">
-          <p class="product-price">$3.00</p>
+          <p class="product-price">$16.00</p>
           
           <p id="stock-label" class="stock-label"></p> 
       </div>
@@ -99,13 +101,13 @@ document.addEventListener("snipcart.ready", () => {
   ⚠️ Please note: We only deliver to the Sunshine Coast (Halfmoon Bay, Pender Harbour, Gibsons, and Keats Island (June, July, August)). <br>Orders outside this area cannot be shipped. ⚠️ 
 </p>
 
-      <button
+      <button style="display: none"
           class="snipcart-add-item buy-button"
-          data-item-id="chocolate-pretzel-cookie-4oz-single"
-          data-item-price="3.00"
-          data-item-description="Small batch, handmade, soft, sourdough, dark chocolate and pretzel cookie."
+          data-item-id="sandwich-2lb-classic"
+          data-item-price="16.00"
+          data-item-description="Small batch, handmixed, soft sourdough sandwich loaves. "
           data-item-image="/images/notavailable.png"
-          data-item-name="Dark &amp; Twisty"
+          data-item-name="Classic"
           data-item-quantity="1"
           data-item-stackable="true"
           data-item-shippable="true"

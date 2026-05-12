@@ -1,39 +1,32 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Bread on Willow and Sage Farms</title>
+    <title>Large Boules on Willow and Sage Farms</title>
     <link>https://www.willowandsagefarms.com/farmstore/bread/</link>
-    <description>Recent content in Bread on Willow and Sage Farms</description>
+    <description>Recent content in Large Boules on Willow and Sage Farms</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 27 Nov 2025 14:44:53 -0800</lastBuildDate>
     <atom:link href="https://www.willowandsagefarms.com/farmstore/bread/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Bagel</title>
-      <link>https://www.willowandsagefarms.com/farmstore/bread/bagel-plain-4pack/</link>
+      <title>Large Boule</title>
+      <link>https://www.willowandsagefarms.com/farmstore/bread/boule-2lb/</link>
       <pubDate>Thu, 27 Nov 2025 14:44:53 -0800</pubDate>
-      <guid>https://www.willowandsagefarms.com/farmstore/bread/bagel-plain-4pack/</guid>
+      <guid>https://www.willowandsagefarms.com/farmstore/bread/boule-2lb/</guid>
       <description></description>
     </item>
     <item>
-      <title>English Muffins</title>
-      <link>https://www.willowandsagefarms.com/farmstore/bread/english-muffins-plain-4pack/</link>
-      <pubDate>Wed, 26 Nov 2025 13:16:39 -0800</pubDate>
-      <guid>https://www.willowandsagefarms.com/farmstore/bread/english-muffins-plain-4pack/</guid>
+      <title>Large Boule - Jalapeno &amp; Cheddar</title>
+      <link>https://www.willowandsagefarms.com/farmstore/bread/boule-2lb/</link>
+      <pubDate>Thu, 27 Nov 2025 14:44:53 -0800</pubDate>
+      <guid>https://www.willowandsagefarms.com/farmstore/bread/boule-2lb/</guid>
       <description></description>
     </item>
     <item>
-      <title>Garlic &amp; Parmesan Loaf</title>
-      <link>https://www.willowandsagefarms.com/farmstore/bread/garlic-parm-loaf-1lb/</link>
-      <pubDate>Wed, 26 Nov 2025 12:00:03 -0800</pubDate>
-      <guid>https://www.willowandsagefarms.com/farmstore/bread/garlic-parm-loaf-1lb/</guid>
-      <description>&lt;p&gt;This will have more information and an image later.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Classic Loaf</title>
-      <link>https://www.willowandsagefarms.com/farmstore/bread/plain-loaf-1lb/</link>
-      <pubDate>Wed, 26 Nov 2025 10:41:42 -0800</pubDate>
-      <guid>https://www.willowandsagefarms.com/farmstore/bread/plain-loaf-1lb/</guid>
+      <title>Sandwich Loaf</title>
+      <link>https://www.willowandsagefarms.com/farmstore/bread/sandwich-loaf/</link>
+      <pubDate>Thu, 27 Nov 2025 14:44:53 -0800</pubDate>
+      <guid>https://www.willowandsagefarms.com/farmstore/bread/sandwich-loaf/</guid>
       <description></description>
     </item>
   </channel>
